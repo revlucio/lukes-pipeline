@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: dotnet test
+          command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj
       - run:
           name: Print the Current Time
           command: date
