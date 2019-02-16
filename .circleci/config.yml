@@ -11,6 +11,10 @@ jobs:
           command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj --logger junit
       - run:
           name: Publish
-          command: dotnet publish Pipeline.Web/Pipeline.Web.csproj
+          command: dotnet publish Pipeline.Web/Pipeline.Web.csproj --output ../dist
       - store_test_results:
           path: Pipeline.Web.Tests/TestResults/
+      - store_artifacts:
+          path: dist
+          destination: web
+

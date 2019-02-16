@@ -3,4 +3,5 @@ bin/
 obj/
 *.sln.DotSettings.user
 TestResults/
+dist/
 
