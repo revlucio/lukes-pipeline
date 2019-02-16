@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj --logger xunit
+          command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj --logger junit
           store_test_results:
             -path: Pipeline.Web.Tests/TestResults
       - run:
