@@ -10,7 +10,7 @@ jobs:
           name: Test
           command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj --logger junit
           store_test_results:
-            -path: Pipeline.Web.Tests/TestResults
+            -path: Pipeline.Web.Tests/TestResults/TestResults.xml
       - run:
           name: Publish
           command: dotnet publish Pipeline.Web/Pipeline.Web.csproj
