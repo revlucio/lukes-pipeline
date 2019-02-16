@@ -1,4 +1,4 @@
-using Pipeline.Domain;
+﻿using Pipeline.Domain;
 using Xunit;
 
 namespace Pipeline.Web.Tests
@@ -8,7 +8,7 @@ namespace Pipeline.Web.Tests
         [Fact]
         public void PrintHelloWorld()
         {
-            Assert.Equal("Hello world! Broken", new Printer().Greet());
+            Assert.Equal("Hello world!", new Printer().Greet());
         }
     }
 }
