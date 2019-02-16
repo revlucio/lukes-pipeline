@@ -8,7 +8,9 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj
+          command: dotnet test Pipeline.Web.Tests/Pipeline.Web.Tests.csproj --logger xunit
+          store_test_results:
+            -path: Pipeline.Web.Tests/TestResults
       - run:
           name: Publish
           command: dotnet publish Pipeline.Web/Pipeline.Web.csproj
